@@ -2,33 +2,40 @@
 using namespace std;
 
 int main(){
-	int angka;
+	int n,i;
+	int angka[10];
 
 	cout << "Menentukan angka yang diinput Positif, Negatif, atau 0" << endl;
 	cout << "------------------------------------------------------" << endl;
 	cout << "Masukkan angka = ";
-	cin >> angka;
+	cin >> n;
 
 	cout << endl;
 
-	if(angka > 0)
+	for (i=0;i<n;i++)
 	{
-		cout << "Angka yang ada masukkan adalah POSITIF" << endl;
-	} 
-	else if(angka < 0)
-	{
-		cout << "Angka yang ada masukkan adalah NEGATIF" << endl;
-	}
-	else if(angka = 0)
-	{
-		cout << "Angka yang ada masukkan adalah 0" << endl;
-	}
-	else
-	{
-		cout << "Yang anda input bukan angka" << endl;
+		cout<<"Masukan angka =";
+		cin>>angka[i];
+		cout<<"\n";
 	}
 
-	return 0;
+	cout<<"\n Bilangan Positif: ";
 	
-	//revisi pertama
+	for(i=0;i<n;i++)
+	{
+		if(angka[i]>0)
+		{
+			cout<<angka[i]<<"      ";
+		}
+	}
+		
+	cout<<"\n Bilangan Negatif : ";
+
+	for(i=0;i<n;i++)
+	{
+		if(angka[i]<0)
+		{
+			cout<<angka[i]<<"       ";
+		}
+	}
 }
